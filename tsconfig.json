@@ -1,0 +1,15 @@
+{
+    "compilerOptions": { 
+        "jsx": "react",
+        "allowSyntheticDefaultImports": true
+    },
+    "target": "esnext",
+    "jsx": "react",
+    "include": [
+        "./app/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
