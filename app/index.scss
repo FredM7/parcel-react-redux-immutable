@@ -1,0 +1,22 @@
+//Declare some variables ==>
+$color-border: gray;
+
+$color-font-dark: black;
+$color-font-light: white;
+
+//Font-Awesome configuration ==>
+$fa-font-path: "./../node_modules/@fortawesome/fontawesome-free/webfonts";
+@import "./../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "./../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "./../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "./../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+
+//Import our components and fontrols ==>
+@import "./components/components";
+@import "./controls/controls";
+
+//Some extra styling ==>
+body {
+    margin: auto;
+    color: $color-font-dark;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Router } from "react-router-dom";
-import { createHashHistory } from 'history';
+import { createBrowserHistory } from 'history';
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 
@@ -23,7 +23,6 @@ function reducer(state = new InitialState, action) {
         default:
             return state;
     }
-    return state;
 }
 
 const store = createStore(reducer);
@@ -31,9 +30,15 @@ store.dispatch({
     type: "Increment"
 });
 
+if (process.env.NODE_ENV === 'development') { 
+    //Or, process.env.NODE_ENV !== 'production'?
+    //Currently, this only runs in development and 
+    //will be stripped from production build.
+}
+
 let Config: any = (
     <Provider store={store}>
-        <Router history={createHashHistory()}>
+        <Router history={createBrowserHistory()}>
             <Main name={"asdad"}/>
         </Router>
     </Provider>

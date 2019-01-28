@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 
-import { Test } from "./components/test";
+import { Sample } from "./components/sample/sample";
 
 import { ReduxProps } from "./types/redux-props";
 
@@ -51,8 +51,8 @@ export default connect(mapStateToProps)(
                         onClick={this.increment} />
 
                     <Switch>
-                        <Route exact path="/test" 
-                            render={() => (<Test/>)} />
+                        <Route exact path="/" 
+                            render={() => (<Sample/>)} />
 
                         <Route path="/new" 
                             render={() => (<div>New</div>)} />
